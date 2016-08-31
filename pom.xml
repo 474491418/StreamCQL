@@ -44,9 +44,22 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <test.extra.args>-Djava.net.preferIPv4Stack=true</test.extra.args>
         <commons-lang.version>2.5</commons-lang.version>
+        <local.repo.host>http://maven.mogujie.org</local.repo.host>
+
     </properties>
 
     <repositories>
+        <repository>
+            <id>public</id>
+            <name>public</name>
+            <url>${local.repo.host}/nexus/content/groups/public/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
         <repository>
             <id>central</id>
             <name>central distribution repository</name>
